@@ -1,9 +1,8 @@
-import './App.css'
 function App() {
   return (
-    <>
-      learn Tiktok
-    </>
+    <div className="sss">
+      <p>Learn tiktok</p>
+    </div>
   )
 }
 
