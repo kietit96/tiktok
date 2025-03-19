@@ -18,7 +18,17 @@
     font-weight: 500;
 }
 
-:root {}
+:root {
+    --primary-color: #0077B5;
+    //default layout
+    --min-height-header: 50px
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Montserrat;
@@ -26,6 +36,12 @@ body {
     font-size: 1.5rem;
     line-height: 1.2em;
     text-rendering: optimizeSpeed;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0px 10px;
 }
 
 .sss {

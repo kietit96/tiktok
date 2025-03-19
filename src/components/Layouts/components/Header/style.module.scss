@@ -1,0 +1,112 @@
+.wrapper {
+    min-height: var(--min-height-header);
+    box-shadow: 0px 0px 2px 1px #d2d2d2;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    aspect-ratio: 1/1;
+    display: block;
+
+    &.icon_search {
+        width: 20px;
+    }
+
+    &.icon_close {
+        width: 13px;
+    }
+}
+
+.logo {
+    flex: 0 0 20%;
+
+    & .logo_image {
+        width: 80%;
+    }
+}
+
+.search {
+    flex: 0 0 30%;
+
+    & .search_form {
+        display: flex;
+        align-items: stretch;
+        background: #F1F1F2;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid #FFF;
+
+        &:focus-within {
+            border-color: #9f9f9f;
+        }
+
+        & .search_input {
+            position: relative;
+            z-index: 0;
+            flex-grow: 1;
+
+            & .input {
+                padding: 10px 35px 10px 15px;
+                width: 100%;
+                border: none;
+                background: transparent;
+                outline: none;
+                font-size: 1rem;
+            }
+
+            & .search_button_close {
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0px;
+                border-radius: 50%;
+                outline: none;
+                border: none;
+                background: #9f9f9f;
+                color: #FFF;
+                padding: 2px;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+        }
+
+        & .search_button {
+            position: relative;
+            z-index: 0;
+            border: 0px;
+            outline: none;
+            cursor: pointer;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &:hover {
+                background: #e5e5e5;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -1px;
+                top: 5px;
+                bottom: 5px;
+                background: #dddddd;
+                width: 1px;
+            }
+        }
+    }
+
+    &~.buttons_list {
+        flex: 0 0 20%
+    }
+}
