@@ -15,11 +15,11 @@
     display: block;
 
     &.icon_search {
-        width: 20px;
+        font-size: 16px;
     }
 
     &.icon_close {
-        width: 13px;
+        font-size: 13px;
     }
 }
 
@@ -60,18 +60,26 @@
                 font-size: 1rem;
             }
 
-            & .search_button_close {
+            & .search_button_close,
+            & .search_button_loading {
                 position: absolute;
                 right: 5px;
                 top: 50%;
                 transform: translateY(-50%);
                 padding: 0px;
                 border-radius: 50%;
+                padding: 2px;
+            }
+
+            & .search_button_loading {
+                color: #000;
+            }
+
+            & .search_button_close {
                 outline: none;
                 border: none;
                 background: #9f9f9f;
                 color: #FFF;
-                padding: 2px;
                 cursor: pointer;
 
                 &:hover {
@@ -105,8 +113,8 @@
             }
         }
     }
+}
 
-    &~.buttons_list {
-        flex: 0 0 20%
-    }
+.buttons_list {
+    flex: 0 0 20%
 }
