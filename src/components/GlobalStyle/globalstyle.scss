@@ -1,25 +1,37 @@
 @import url(normalize.css);
+$fontsMontserrat: (
+    (weight: 100, name: 'Thin', fontStyle: 'normal'),
+    (weight: 100, name: 'ThinItalic', fontStyle: 'italic'),
+    (weight: 200, name: 'ExtraLight', fontStyle: 'normal'),
+    (weight: 200, name: 'ExtraLightItalic', fontStyle: 'italic'),
+    (weight: 300, name: 'Light', fontStyle: 'normal'),
+    (weight: 300, name: 'LightItalic', fontStyle: 'italic'),
+    (weight: 400, name: 'Regular', fontStyle: 'normal'),
+    (weight: 400, name: 'Regular', fontStyle: 'italic'),
+    (weight: 500, name: 'Medium', fontStyle: 'normal'),
+    (weight: 500, name: 'MediumItalic', fontStyle: 'italic'),
+    (weight: 600, name: 'SemiBold', fontStyle: 'normal'),
+    (weight: 600, name: 'SemiBold', fontStyle: 'italic'),
+    (weight: 700, name: 'Bold', fontStyle: 'normal'),
+    (weight: 700, name: 'BoldItalic', fontStyle: 'italic'),
+    (weight: 800, name: 'ExtraBold', fontStyle: 'normal'),
+    (weight: 800, name: 'ExtraBoldItalic', fontStyle: 'italic'),
+    (weight: 900, name: 'Black', fontStyle: 'normal'),
+    (weight: 900, name: 'BlackItalic', fontStyle: 'italic'),
+);
 
-@font-face {
-    font-family: Montserrat;
-    src: url(../../assets/fonts/Montserrat/Montserrat-Light.ttf);
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url(../../assets/fonts/Montserrat/Montserrat-Regular.ttf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url(../../assets/fonts/Montserrat/Montserrat-Bold.ttf);
-    font-weight: 500;
+@each $font in $fontsMontserrat {
+    @font-face {
+        font-family: Montserrat;
+        src: url('@/assets/fonts/Montserrat/Montserrat-#{map-get($font, name)}.ttf');
+        font-weight: #{map-get($font, weight)};
+        font-style: #{map-get($font, fontStyle)};
+    }
 }
 
 :root {
-    --primary-color: #0077B5;
+    --primary-color: #C8374F;
+    --color-check: rgb(32, 213, 236);
     //default layout
     --min-height-header: 50px
 }
@@ -44,6 +56,13 @@ body {
     padding: 0px 10px;
 }
 
-.sss {
-    font-weight: 500;
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    text-decoration: none;
 }

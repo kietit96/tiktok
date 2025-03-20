@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+
+    & .title {
+        margin: 5px 0px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #333;
+    }
+}

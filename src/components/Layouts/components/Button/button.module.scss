@@ -1,0 +1,46 @@
+.wrapper {
+    &.small {
+        padding: 3px 10px;
+        font-size: 1.2rem;
+    }
+
+    &.normal {
+        padding: 6px 15px;
+        font-size: 1.4rem;
+    }
+
+    &.large {
+        padding: 8px 15px;
+        font-size: 1.6rem;
+    }
+
+    padding: 6px 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #f2f2f2;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+
+    &[href] {
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        color: #FFF;
+        background-color: var(--primary-color);
+    }
+}
+
+.primary[href] {
+    color: #FFF;
+}
+
+.primary {
+    color: #FFF;
+    background-color: var(--primary-color);
+
+    &:hover {
+        background-color: rgba(234, 40, 78, 1);
+    }
+}

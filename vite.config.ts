@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': '/src',
+      '@layoutcomps': '/src/components/Layouts/components',
       '@comps': '/src/components',
-      '@layoutcomps': '/src/components/Layouts/components'
+      '@': '/src',
     }
   }
 })
