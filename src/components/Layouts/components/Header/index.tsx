@@ -1,13 +1,13 @@
 
 import images from '@/assets/images'
-import style from './style.module.scss'
-import { NavLink } from 'react-router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useRef, useState } from 'react'
 import { autoUpdate, flip, FloatingFocusManager, FloatingPortal, size, useDismiss, useFloating, useInteractions, useListNavigation, useRole } from '@floating-ui/react'
-import SearchPopper from '@layoutcomps/Popper'
+import { faEllipsisVertical, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MyButton from '@layoutcomps/Button'
+import SearchPopper from '@layoutcomps/Popper'
+import { useRef, useState } from 'react'
+import { NavLink } from 'react-router'
+import style from './style.module.scss'
 
 export default function Header() {
   const [valueSearch, setValueSearch] = useState<string>('')
@@ -108,7 +108,13 @@ export default function Header() {
             </FloatingPortal>
           )}
           <div className={style.buttons_list}>
-            <MyButton primary>Log in</MyButton>
+            <MyButton frame="text" to='/upload'>Upload</MyButton>
+            &nbsp;
+            <MyButton frame="primary">Log in</MyButton>
+            &nbsp;
+            <button className={style.button_settings}>
+              <FontAwesomeIcon icon={faEllipsisVertical} />
+            </button>
           </div>
         </div>
       </div>

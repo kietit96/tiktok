@@ -20,9 +20,9 @@
     cursor: pointer;
     background: #f2f2f2;
     border: 2px solid var(--primary-color);
-    color: var(--primary-color);
 
-    &[href] {
+    &[href],
+    & {
         color: var(--primary-color);
     }
 
@@ -32,15 +32,31 @@
     }
 }
 
-.primary[href] {
-    color: #FFF;
+.text {
+    background: #f2f2f2;
+    border-color: #f2f2f2;
+
+    &[href],
+    & {
+        color: #000;
+    }
+
+    &:hover {
+        background: #e6e4e4;
+        color: #444;
+    }
 }
 
+
 .primary {
-    color: #FFF;
     background-color: var(--primary-color);
 
     &:hover {
         background-color: rgba(234, 40, 78, 1);
+    }
+
+    &[href],
+    & {
+        color: #FFF;
     }
 }

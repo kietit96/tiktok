@@ -4,9 +4,9 @@ import { NavLink } from "react-router"
 interface Iprops {
     href?: string
     to?: string
-    primary?: boolean,
     size?: string,
     onClick?: () => unknown,
+    frame?: string,
     children: React.ReactNode
 }
 interface I_attr {
@@ -15,11 +15,11 @@ interface I_attr {
 }
 
 export default function MyButton(props: Iprops) {
-    const { href, to, primary, size = 'medium', children, onClick, ...restProps } = props
+    const { href, to, frame = "primary", size = 'medium', children, onClick, ...restProps } = props
     const className: (string | undefined | false)[] = [
         style.wrapper,
         style[size],
-        primary && style.primary,
+        style[frame],
     ]
     let Component: string | React.ElementType = 'button'
     const _attr: I_attr = {

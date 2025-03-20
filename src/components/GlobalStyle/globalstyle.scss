@@ -1,3 +1,4 @@
+@use "sass:map";
 @import url(normalize.css);
 $fontsMontserrat: (
     (weight: 100, name: 'Thin', fontStyle: 'normal'),
@@ -23,9 +24,9 @@ $fontsMontserrat: (
 @each $font in $fontsMontserrat {
     @font-face {
         font-family: Montserrat;
-        src: url('@/assets/fonts/Montserrat/Montserrat-#{map-get($font, name)}.ttf');
-        font-weight: #{map-get($font, weight)};
-        font-style: #{map-get($font, fontStyle)};
+        src: url('@/assets/fonts/Montserrat/Montserrat-#{map.get($font, name)}.ttf');
+        font-weight: #{map.get($font, weight)};
+        font-style: #{map.get($font, fontStyle)};
     }
 }
 
