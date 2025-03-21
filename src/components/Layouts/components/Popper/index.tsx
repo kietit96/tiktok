@@ -1,7 +1,7 @@
-import AccountItem from "@layoutcomps/Account";
-import { default as WrapperAccount } from "@layoutcomps/Account/wrapper";
-import SearchItem from "@layoutcomps/Search";
-import { default as WrapperPopper } from "@layoutcomps/Search/wrapper";
+import AccountItem from "./Account";
+import { default as WrapperAccount } from "./Account/wrapper";
+import { default as WrapperPopper } from "./Searchs/wrapper";
+import SearchItem from "./Searchs";
 export default function SearchPopper() {
   return (
     <>

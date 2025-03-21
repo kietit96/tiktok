@@ -1,4 +1,3 @@
-import React from "react"
 import style from "./wrapper.module.scss"
 interface IProps {
     children: React.ReactNode

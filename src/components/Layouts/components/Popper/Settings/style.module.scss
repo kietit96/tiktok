@@ -1,0 +1,13 @@
+.listButtons {
+    display: flex;
+    flex-direction: column;
+
+    & button,
+    & a {
+        text-align: left;
+        background: #FFF;
+        border: none;
+        margin: 5px 0px;
+        padding: 5px 5px;
+    }
+}
